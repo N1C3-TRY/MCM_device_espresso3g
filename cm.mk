@@ -24,6 +24,9 @@ TARGET_PROVIDES_INIT_RC := true
 # Inherit common CM configuration
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Packages
+PRODUCT_PACKAGES += SamsungServiceMode
+ 
 # CyanogenMod specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso3g/overlay/cm
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espressowifi/overlay/cm-common

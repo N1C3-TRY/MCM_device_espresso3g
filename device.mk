@@ -24,17 +24,14 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/aosp
 PRODUCT_COPY_FILES += \
     device/samsung/espresso3g/configs/audio_policy.conf:system/etc/audio_policy.conf
 
-# Packages
-PRODUCT_PACKAGES += SamsungServiceMode
-
 # RIL
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    libsecril-compat
+
 PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.telephony.ril_class=SamsungOmap4RIL
-
-PRODUCT_PACKAGES += \
-    libsamsung_symbols \
-    libsecril-client
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
