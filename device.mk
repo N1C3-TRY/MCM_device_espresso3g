@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,13 +11,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # Include espresso-common makefile
 $(call inherit-product, device/samsung/espressowifi/espresso-common.mk)
 
-# Include 3g overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/aosp
+# 3g overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/device
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -33,10 +31,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.telephony.ril_class=SamsungOmap4RIL
 
-# These are the hardware-specific features
+# Hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml
 
-# Use the non-open-source parts.
+# Non-open-source parts.
 $(call inherit-product, device/samsung/espresso3g/blobs/espresso3g-blobs.mk)

@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,14 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # Include common espresso BoardConfig
-include device/samsung/espressowifi/BoardConfigCommon.mk
+-include device/samsung/espressowifi/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso3g/include
 
-# assert
+# Assert
 TARGET_OTA_ASSERT_DEVICE := espresso3g,espressorf,espressorfxx,p3100,GT-P3100,espresso10rf,espresso10rfxx,p5100,GT-P5100,espresso-common
 
 # RIL
@@ -29,6 +27,5 @@ BOARD_MODEM_TYPE := xmm6260
 BOARD_RIL_CLASS := ../../../device/samsung/espresso3g/ril
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
-# Selinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/espresso3g/sepolicy
+# Device Selinux rules
+BOARD_SEPOLICY_DIRS += device/samsung/espresso3g/sepolicy

@@ -1,4 +1,3 @@
-#
 # Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from the common Open Source product configuration
+# Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit device specific configuration
+# Device specific configuration
 $(call inherit-product, device/samsung/espresso3g/device.mk)
 
 PRODUCT_DEVICE := espresso3g
